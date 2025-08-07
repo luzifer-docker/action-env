@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}custom.latestver{{/if}}",
+      "managerFilePatterns": [
+        "Dockerfile"
+      ],
+      "matchStrings": [
+        "(:?[A-Z]+_)?VERSION=(?<currentValue>.*?)\\s# renovate: packageName=(?<packageName>.*)(?: datasource=(?<datasource>.+?))?\\s"
+      ]
+    }
+  ],
+  "extends": [
+    "https://git.luzifer.io/luzifer/renovate-config/raw/branch/master/default.json"
+  ]
+}
