@@ -8,7 +8,7 @@
         "Dockerfile"
       ],
       "matchStrings": [
-        "(:?[A-Z]+_)?VERSION=(?<currentValue>.*?)\\s# renovate: packageName=(?<packageName>.*)(?: datasource=(?<datasource>.+?))?\\s"
+        "(:?[A-Z]+_)?VERSION=(?<currentValue>.*?)\\s# renovate: packageName=(?<packageName>.+?)(?: datasource=(?<datasource>.+?))?\\s"
       ]
     }
   ],
