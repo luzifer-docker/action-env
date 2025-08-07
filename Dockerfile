@@ -4,7 +4,7 @@ ARG GOLANG_VERSION=1.24.6 # renovate: packageName=golang/latest
 ARG GOLANGCI_LINT_VERSION=2.2.2 # renovate: packageName=golangci-lint/latest
 ARG GOYQ_VERSION=4.46.1 # renovate: packageName=yq/latest
 ARG HELM_VERSION=3.18.4 # renovate: packageName=helm/latest
-ARG NODE_VERSION=22.17.0 # renovate: packageName=node datasource=node-version
+ARG NODE_VERSION=22.18.0 # renovate: packageName=node datasource=node-version
 ARG VAULT_VERSION=1.20.0 # renovate: packageName=vault/latest
 
 ENV DEBIAN_FRONTEND=noninteractive \
