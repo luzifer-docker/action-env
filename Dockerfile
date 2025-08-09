@@ -8,7 +8,8 @@ ARG NODE_VERSION=22.18.0 # renovate: packageName=node datasource=node-version
 ARG VAULT_VERSION=1.20.2 # renovate: packageName=vault/latest
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
+    GOPATH=/go \
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/go/bin
 
 COPY --chown=root:root --chmod=700 build.sh /usr/sbin/build.sh
 RUN /usr/sbin/build.sh
