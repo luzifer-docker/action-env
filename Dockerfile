@@ -1,4 +1,4 @@
-FROM debian:12.11-slim@sha256:8f8e63bb364a33694362f38ee9a9e38b09eb9eb138584693800b87ca173bfd4a
+FROM debian:12.11-slim@sha256:b1a741487078b369e78119849663d7f1a5341ef2768798f7b7406c4240f86aef
 
 ARG GOLANG_VERSION=1.24.6 # renovate: packageName=golang/latest
 ARG GOLANGCI_LINT_VERSION=2.3.1 # renovate: packageName=golangci-lint/latest
