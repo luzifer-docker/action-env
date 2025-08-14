@@ -69,7 +69,7 @@ chmod 0755 /usr/local/bin/yq
 ## Helm
 
 log "Installing Helm ${HELM_VERSION}..."
-curl -sSfL "https://get.helm.sh/helm-v${HELM_VERSION}-linux-arm64.tar.gz" |
+curl -sSfL "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" |
   tar -C /usr/local/bin -xz --strip-components=1 --wildcards '*/helm'
 
 ## Nodejs
