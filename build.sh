@@ -3,6 +3,7 @@ set -euo pipefail
 
 dist_packages=(
   ansible-core
+  build-essential
   ca-certificates
   curl
   diffutils
