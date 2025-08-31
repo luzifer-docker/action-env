@@ -15,6 +15,7 @@ dist_packages=(
   less
   make
   openssh-client
+  pkg-config
   rsync
   sudo
   tar
