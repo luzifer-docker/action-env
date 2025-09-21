@@ -1,7 +1,7 @@
 FROM debian:12.12-slim@sha256:df52e55e3361a81ac1bead266f3373ee55d29aa50cf0975d440c2be3483d8ed3
 
 ARG GOLANG_VERSION=1.25.1 # renovate: packageName=golang/latest
-ARG GOLANGCI_LINT_VERSION=2.4.0 # renovate: packageName=golangci-lint/latest
+ARG GOLANGCI_LINT_VERSION=2.5.0 # renovate: packageName=golangci-lint/latest
 ARG GOYQ_VERSION=4.47.2 # renovate: packageName=yq/latest
 ARG HELM_VERSION=3.19.0 # renovate: packageName=helm/latest
 ARG NODE_VERSION=22.19.0 # renovate: packageName=node datasource=node-version
