@@ -84,7 +84,7 @@ apt_install nodejs
 ## Trivy
 
 curl -sSfL https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor -o /etc/apt/keyrings/trivy.gpg
-echo "deb [signed-by=/etc/apt/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb ${CODENAME} main" >/etc/apt/sources.list.d/trivy.list
+echo "deb [signed-by=/etc/apt/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" >/etc/apt/sources.list.d/trivy.list
 
 apt_install trivy
 
