@@ -1,6 +1,6 @@
 FROM debian:13.3-slim@sha256:1d3c811171a08a5adaa4a163fbafd96b61b87aa871bbc7aa15431ac275d3d430
 
-ARG GOLANG_VERSION=1.26.0 # renovate: packageName=golang/latest
+ARG GOLANG_VERSION=1.26.1 # renovate: packageName=golang/latest
 ARG GOLANGCI_LINT_VERSION=2.11.1 # renovate: packageName=golangci-lint/latest
 ARG GOYQ_VERSION=4.52.4 # renovate: packageName=yq/latest
 ARG HELM_VERSION=4.1.1 # renovate: packageName=helm/latest
