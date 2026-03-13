@@ -14,4 +14,4 @@ ENV DEBIAN_FRONTEND=noninteractive \
 COPY --chown=root:root --chmod=700 build.sh /usr/sbin/build.sh
 RUN /usr/sbin/build.sh
 
-COPY --from=ghcr.io/astral-sh/uv:0.10.9@sha256:10902f58a1606787602f303954cea099626a4adb02acbac4c69920fe9d278f82 /uv /uvx /usr/local/bin/
+COPY --from=ghcr.io/astral-sh/uv:0.10.10@sha256:cbe0a44ba994e327b8fe7ed72beef1aaa7d2c4c795fd406d1dbf328bacb2f1c5 /uv /uvx /usr/local/bin/
