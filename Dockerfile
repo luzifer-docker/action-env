@@ -3,7 +3,7 @@ FROM debian:13.4-slim@sha256:4ffb3a1511099754cddc70eb1b12e50ffdb67619aa0ab6c13fc
 ARG GOLANG_VERSION=1.26.2 # renovate: packageName=golang/latest
 ARG GOLANGCI_LINT_VERSION=2.11.4 # renovate: packageName=golangci-lint/latest
 ARG GOYQ_VERSION=4.52.5 # renovate: packageName=yq/latest
-ARG HELM_VERSION=4.1.3 # renovate: packageName=helm/latest
+ARG HELM_VERSION=4.1.4 # renovate: packageName=helm/latest
 ARG NODE_VERSION=24.14.1 # renovate: packageName=node datasource=node-version
 ARG VAULT_VERSION=1.21.4 # renovate: packageName=vault/latest
 
