@@ -14,6 +14,14 @@ ENV DEBIAN_FRONTEND=noninteractive \
 COPY --chown=root:root --chmod=700 build.sh /usr/sbin/build.sh
 RUN /usr/sbin/build.sh
 
-COPY --from=ghcr.io/astral-sh/uv:0.11.6@sha256:b1e699368d24c57cda93c338a57a8c5a119009ba809305cc8e86986d4a006754 /uv /uvx /usr/local/bin/
+COPY --from=ghcr.io/astral-sh/uv:0.11.6@sha256:b1e699368d24c57cda93c338a57a8c5a119009ba809305cc8e86986d4a006754 \
+  /uv /uvx \
+  /usr/local/bin/
 
-COPY --from=ghcr.io/luzifer-docker/pnpm:v10.33.0@sha256:37421bf6d0c9bb40c8fc3471b2ed1f2e7947b4668692713c7db8877feb840d8a . /
+COPY --from=ghcr.io/luzifer-docker/pnpm:v10.33.0@sha256:37421bf6d0c9bb40c8fc3471b2ed1f2e7947b4668692713c7db8877feb840d8a \
+  / \
+  /
+
+COPY --from=ghcr.io/luzifer-docker/kubectl:v1.35.3@sha256:dd74f6d8227c858f1a8465e41d7d1c1ed54e680a91e16d098ba50573969aa6fd \
+  /usr/local/bin/kubectl \
+  /usr/local/bin/
