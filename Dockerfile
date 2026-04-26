@@ -22,6 +22,6 @@ COPY --from=ghcr.io/luzifer-docker/pnpm:v10.33.2@sha256:11b50efc9a57a215c6e33f6d
   / \
   /
 
-COPY --from=ghcr.io/luzifer-docker/kubectl:v1.35.4@sha256:1e2268e6aa24ee9fa692ffa41ecbbfb6f0cb6a2bad3074b3cb21c32a4abaafcd \
+COPY --from=ghcr.io/luzifer-docker/kubectl:v1.36.0@sha256:d562d5e6b15fcf38626f81c5696ff1e47b281aa1800ce946e4a1ec6f9e3497bc \
   /usr/local/bin/kubectl \
   /usr/local/bin/
