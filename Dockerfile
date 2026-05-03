@@ -1,11 +1,11 @@
 FROM debian:13.4-slim@sha256:cedb1ef40439206b673ee8b33a46a03a0c9fa90bf3732f54704f99cb061d2c5a
 
-ARG GOLANG_VERSION=1.26.2 # renovate: packageName=golang/latest
-ARG GOLANGCI_LINT_VERSION=2.12.1 # renovate: packageName=golangci-lint/latest
-ARG GOYQ_VERSION=4.53.2 # renovate: packageName=yq/latest
-ARG HELM_VERSION=4.1.4 # renovate: packageName=helm/latest
-ARG NODE_VERSION=24.15.0 # renovate: packageName=node datasource=node-version
-ARG VAULT_VERSION=2.0.0 # renovate: packageName=vault/latest
+ARG GOLANG_VERSION=1.26.2  # renovate: packageName=golang datasource=golang-version
+ARG GOLANGCI_LINT_VERSION=2.12.1  # renovate: packageName=golangci/golangci-lint datasource=github-releases
+ARG GOYQ_VERSION=4.53.2  # renovate: packageName=mikefarah/yq datasource=github-releases
+ARG HELM_VERSION=4.1.4  # renovate: packageName=helm/helm datasource=github-releases
+ARG NODE_VERSION=24.15.0  # renovate: packageName=node datasource=node-version
+ARG VAULT_VERSION=2.0.0  # renovate: packageName=hashicorp/vault datasource=github-releases
 
 ENV DEBIAN_FRONTEND=noninteractive \
     GOPATH=/go \
