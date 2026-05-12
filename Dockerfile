@@ -21,6 +21,7 @@ ARG GOYQ_VERSION=4.53.2  # renovate: packageName=mikefarah/yq datasource=github-
 ARG HELM_VERSION=4.1.4  # renovate: packageName=helm/helm datasource=github-releases
 ARG NODE_VERSION=24.15.0  # renovate: packageName=node datasource=node-version
 ARG ORAS_VERSION=1.3.2  # renovate: packageName=oras-project/oras datasource=github-releases
+ARG SYFT_VERSION=1.44.0  # renovate: packageName=anchore/syft datasource=github-releases
 ARG VAULT_VERSION=2.0.0  # renovate: packageName=hashicorp/vault datasource=github-releases
 
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
@@ -91,6 +92,12 @@ EOF
 RUN <<-EOF
   curl -sSfL "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_amd64.tar.gz" |
     tar -C /rootfs/usr/local/bin -xz oras
+EOF
+
+# Install syft
+RUN <<-EOF
+  curl -sSfL "https://github.com/anchore/syft/releases/download/v${SYFT_VERSION}/syft_${SYFT_VERSION}_linux_amd64.tar.gz" |
+    tar -C /rootfs/usr/local/bin -xz syft
 EOF
 
 # Install vault
