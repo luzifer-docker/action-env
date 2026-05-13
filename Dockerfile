@@ -136,6 +136,7 @@ RUN set -ex \
       openssh-client \
       pkg-config \
       rsync \
+      skopeo \
       sudo \
       tar \
       zip \
