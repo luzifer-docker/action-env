@@ -37,7 +37,7 @@ COPY --from=ghcr.io/luzifer-docker/pnpm:v11.0.9@sha256:f120f866a7a63c8f65bba4739
   /rootfs/
 
 # Install kubectl from the OCI image
-COPY --from=ghcr.io/luzifer-docker/kubectl:v1.36.0@sha256:d562d5e6b15fcf38626f81c5696ff1e47b281aa1800ce946e4a1ec6f9e3497bc \
+COPY --from=ghcr.io/luzifer-docker/kubectl:v1.36.1@sha256:ef0ef57ae86b6343338d5bf4b350b07ab3183055fa59c47b4988ecd4872552e9 \
   /usr/local/bin/kubectl \
   /rootfs/usr/local/bin/
 
