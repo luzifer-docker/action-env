@@ -15,7 +15,7 @@ RUN set -ex \
 
 FROM base AS builder
 
-ARG GOLANG_VERSION=1.26.3  # renovate: packageName=golang datasource=golang-version
+ARG GOLANG_VERSION=1.26.4  # renovate: packageName=golang datasource=golang-version
 ARG GOLANGCI_LINT_VERSION=2.12.2  # renovate: packageName=golangci/golangci-lint datasource=github-releases
 ARG GOYQ_VERSION=4.53.2  # renovate: packageName=mikefarah/yq datasource=github-releases
 ARG HELM_VERSION=4.2.0  # renovate: packageName=helm/helm datasource=github-releases
