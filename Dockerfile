@@ -32,7 +32,7 @@ COPY --from=ghcr.io/astral-sh/uv:0.11.23@sha256:d0a0a753ab981624b49c97abc98821c1
   /rootfs/usr/local/bin/
 
 # Install pnpm from the OCI image
-COPY --from=ghcr.io/luzifer-docker/pnpm:v11.7.0@sha256:c0f7f08a055dca5f5041a1751da6434734d8751568f2e64e8461d0848c8a1cef \
+COPY --from=ghcr.io/luzifer-docker/pnpm:v11.8.0@sha256:86494d80979b1185fae20e7c2d1152c85fc35e261cf23245e66869ef60c168bd \
   / \
   /rootfs/
 
