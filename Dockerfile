@@ -41,6 +41,11 @@ COPY --from=ghcr.io/luzifer-docker/kubectl:v1.36.2@sha256:3a29eec0d4175afda1a7f1
   /usr/local/bin/kubectl \
   /rootfs/usr/local/bin/
 
+# Install Forgejo-Runner binary from the OCI image
+COPY --from=code.forgejo.org/forgejo/runner:12.13.2@sha256:eb6e7bc21973382d261e6eb883dbd27b8cb56939d33a3bfd79a1352b7f9a33a0 \
+  /bin/forgejo-runner \
+  /rootfs/usr/local/bin/
+
 # Setup APT repos
 RUN <<-EOF
   CODENAME="$(. /etc/os-release && echo "$VERSION_CODENAME")"
