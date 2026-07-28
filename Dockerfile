@@ -136,6 +136,7 @@ RUN set -ex \
       git \
       git-crypt \
       git-lfs \
+      jq \
       less \
       make \
       openssh-client \

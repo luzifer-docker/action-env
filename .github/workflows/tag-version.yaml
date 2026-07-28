@@ -1,0 +1,30 @@
+name: Tag Version
+
+on:
+  schedule:
+    - cron: '0 4 * * 6'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  tag-version:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/luzifer-docker/action-env:master@sha256:3b299c9c59f5ac62c83e0f0aff2e16565b08f4233c6040b93d439f381c5d0483
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          show-progress: false
+
+      - name: Log into registry
+        run: skopeo login ghcr.io --username "${GITHUB_ACTOR}" --password-stdin <<<"${GITHUB_TOKEN}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag version
+        run: bash ci/tag-version.sh
