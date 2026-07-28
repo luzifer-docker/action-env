@@ -5,9 +5,9 @@ on:
     branches: [master]
     tags: ['*']
     paths:
-      - 'build.sh'
       - 'Dockerfile'
-  workflow_dispatch:
+      - 'rootfs/**'
+  workflow_dispatch: {}
 
 permissions:
   contents: read
