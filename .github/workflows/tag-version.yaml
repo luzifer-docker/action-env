@@ -16,6 +16,10 @@ jobs:
     container:
       image: ghcr.io/luzifer-docker/action-env:master@sha256:3b299c9c59f5ac62c83e0f0aff2e16565b08f4233c6040b93d439f381c5d0483
 
+    defaults:
+      run:
+        shell: bash
+
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
