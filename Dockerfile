@@ -42,7 +42,7 @@ COPY --from=ghcr.io/luzifer-docker/kubectl:v1.36.3@sha256:f6e36dd2a3384ed22180f4
   /rootfs/usr/local/bin/
 
 # Install Forgejo-Runner binary from the OCI image
-COPY --from=code.forgejo.org/forgejo/runner:12.13.2@sha256:eb6e7bc21973382d261e6eb883dbd27b8cb56939d33a3bfd79a1352b7f9a33a0 \
+COPY --from=code.forgejo.org/forgejo/runner:13.0.0@sha256:7fb853bfe73c229be6349398359c0a7bd01fadfd17c106607b2221150b799ed2 \
   /bin/forgejo-runner \
   /rootfs/usr/local/bin/
 
