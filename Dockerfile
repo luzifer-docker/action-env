@@ -120,6 +120,7 @@ FROM base
 
 ENV DEBIAN_FRONTEND=noninteractive \
     GOPATH=/go \
+    GOTOOLCHAIN=local \
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin:/go/bin
 
 # Install compiled rootfs
