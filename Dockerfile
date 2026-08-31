@@ -20,7 +20,7 @@ ARG GOLANGCI_LINT_VERSION=2.13.2  # renovate: packageName=golangci/golangci-lint
 ARG GOYQ_VERSION=4.53.6  # renovate: packageName=mikefarah/yq datasource=github-releases
 ARG HELM_VERSION=4.2.4  # renovate: packageName=helm/helm datasource=github-releases
 ARG NODE_VERSION=24.20.0  # renovate: packageName=node datasource=node-version
-ARG ORAS_VERSION=1.3.3  # renovate: packageName=oras-project/oras datasource=github-releases
+ARG ORAS_VERSION=1.3.4  # renovate: packageName=oras-project/oras datasource=github-releases
 ARG SYFT_VERSION=1.51.1  # renovate: packageName=anchore/syft datasource=github-releases
 ARG VAULT_VERSION=2.0.4  # renovate: packageName=hashicorp/vault datasource=github-releases
 
