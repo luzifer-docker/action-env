@@ -27,7 +27,7 @@ ARG VAULT_VERSION=2.0.4  # renovate: packageName=hashicorp/vault datasource=gith
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
 
 # Install uv and uvx from the OCI image
-COPY --from=ghcr.io/astral-sh/uv:0.12.8@sha256:d1cbaeadc234fe19c0d93daabcf5e98738cd93c6d1dd4918ef6aa30735feb23a \
+COPY --from=ghcr.io/astral-sh/uv:0.12.9@sha256:8b940d3a9d65bed080436972241af2e21c84b5e8c9193f7014ed71479ee795ff \
   /uv /uvx \
   /rootfs/usr/local/bin/
 
