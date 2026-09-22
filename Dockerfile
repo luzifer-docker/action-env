@@ -1,4 +1,4 @@
-FROM debian:13.6-slim@sha256:d7e12182ce18b85b93007c1dedf31f2d29e01ccf3182cc4017c709b6259bc132 AS base
+FROM debian:13.7-slim@sha256:a99cfc517144bc59b1978475ec53b46ecabec7e43635402ee5b77cc54cd1b20a AS base
 
 # We need those in the builder before setting up apt repos and we need
 # those in the final image, so keep them in the base
