@@ -144,6 +144,7 @@ RUN set -ex \
       openssh-client \
       pkg-config \
       python3 \
+      python3-venv \
       rsync \
       skopeo \
       sudo \
