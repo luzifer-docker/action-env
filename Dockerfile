@@ -143,6 +143,7 @@ RUN set -ex \
       make \
       openssh-client \
       pkg-config \
+      python3 \
       rsync \
       skopeo \
       sudo \
