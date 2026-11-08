@@ -21,7 +21,7 @@ ARG GOYQ_VERSION=4.54.1  # renovate: packageName=mikefarah/yq datasource=github-
 ARG HELM_VERSION=4.3.1  # renovate: packageName=helm/helm datasource=github-releases
 ARG NODE_VERSION=24.22.2  # renovate: packageName=node datasource=node-version
 ARG ORAS_VERSION=1.3.6  # renovate: packageName=oras-project/oras datasource=github-releases
-ARG SYFT_VERSION=1.56.0  # renovate: packageName=anchore/syft datasource=github-releases
+ARG SYFT_VERSION=1.57.0  # renovate: packageName=anchore/syft datasource=github-releases
 ARG VAULT_VERSION=2.2.1  # renovate: packageName=hashicorp/vault datasource=github-releases
 
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
