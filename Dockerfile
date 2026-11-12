@@ -17,7 +17,7 @@ FROM base AS builder
 
 ARG GOLANG_VERSION=1.27.3  # renovate: packageName=golang datasource=golang-version
 ARG GOLANGCI_LINT_VERSION=2.15.0  # renovate: packageName=golangci/golangci-lint datasource=github-releases
-ARG GOYQ_VERSION=4.54.1  # renovate: packageName=mikefarah/yq datasource=github-releases
+ARG GOYQ_VERSION=4.54.3  # renovate: packageName=mikefarah/yq datasource=github-releases
 ARG HELM_VERSION=4.3.1  # renovate: packageName=helm/helm datasource=github-releases
 ARG NODE_VERSION=24.22.2  # renovate: packageName=node datasource=node-version
 ARG ORAS_VERSION=1.3.6  # renovate: packageName=oras-project/oras datasource=github-releases
