@@ -22,7 +22,7 @@ ARG HELM_VERSION=4.3.1  # renovate: packageName=helm/helm datasource=github-rele
 ARG NODE_VERSION=26.13.1  # renovate: packageName=node datasource=node-version
 ARG ORAS_VERSION=1.3.6  # renovate: packageName=oras-project/oras datasource=github-releases
 ARG SYFT_VERSION=1.57.1  # renovate: packageName=anchore/syft datasource=github-releases
-ARG VAULT_VERSION=2.2.1  # renovate: packageName=hashicorp/vault datasource=github-releases
+ARG VAULT_VERSION=2.2.2  # renovate: packageName=hashicorp/vault datasource=github-releases
 
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
 
