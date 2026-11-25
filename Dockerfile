@@ -2,15 +2,40 @@ FROM debian:13.7-slim@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070
 
 # We need those in the builder before setting up apt repos and we need
 # those in the final image, so keep them in the base
-RUN set -ex \
- && apt-get update \
- && apt-get install --assume-yes --no-install-recommends \
-      ca-certificates \
-      curl \
-      gnupg \
-      unzip \
- && apt-get autoremove --assume-yes --purge \
- && apt-get clean --assume-yes
+RUN <<-EOF
+  set -ex
+
+  apt-get update
+  apt-get install --assume-yes --no-install-recommends \
+    ca-certificates \
+    curl \
+    gnupg \
+    unzip
+
+  apt-get autoremove --assume-yes --purge
+  apt-get clean --assume-yes
+EOF
+
+
+FROM golang:1.27.4 AS gobuilder
+
+ENV CGO_ENABLED=0 \
+    GOBIN=/rootfs/usr/local/bin \
+    GOTOOLCHAIN=local \
+    GOPRIVATE=git.luzifer.io
+
+SHELL ["/usr/bin/env", "bash", "-euxo", "pipefail", "-c"]
+RUN <<-EOF
+  function goinst() {
+    go install \
+      -trimpath \
+      -buildvcs=false \
+      -ldflags="-s -w -buildid=" \
+      "$@"
+  }
+
+  goinst git.luzifer.io/luzifer/runner-wrap@latest
+EOF
 
 
 FROM base AS builder
@@ -111,6 +136,8 @@ RUN <<-EOF
   curl -sSfLo ${vault_tmp}/vault.zip "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip"
   unzip ${vault_tmp}/vault.zip vault -d /rootfs/usr/local/bin
 EOF
+
+COPY --from=gobuilder /rootfs/ /rootfs/
 
 # Install base files from local repo
 COPY rootfs/ /rootfs/
